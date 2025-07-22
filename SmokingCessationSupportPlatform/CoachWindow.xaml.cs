@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using DAL.Models;
+
+namespace SmokingCessationSupportPlatform
+{
+    /// <summary>
+    /// Interaction logic for CoachWindow.xaml
+    /// </summary>
+    public partial class CoachWindow : Window
+    {
+        public UserModel Account { get; set; }
+        public CoachWindow()
+        {
+            InitializeComponent();
+        }
+    }
+}

@@ -1,0 +1,14 @@
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\bin\Debug\net9.0\DAL.deps.json
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\bin\Debug\net9.0\DAL.runtimeconfig.json
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\bin\Debug\net9.0\DAL.dll
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\bin\Debug\net9.0\DAL.pdb
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.csproj.AssemblyReference.cache
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.AssemblyInfoInputs.cache
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.AssemblyInfo.cs
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.csproj.CoreCompileInputs.cache
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.dll
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\refint\DAL.dll
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.pdb
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.genruntimeconfig.cache
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\ref\DAL.dll
