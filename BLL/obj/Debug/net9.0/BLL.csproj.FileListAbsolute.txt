@@ -8,6 +8,7 @@ D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\BLL\obj\Debug\net9.0\BL
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\BLL\obj\Debug\net9.0\BLL.AssemblyInfoInputs.cache
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\BLL\obj\Debug\net9.0\BLL.AssemblyInfo.cs
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\BLL\obj\Debug\net9.0\BLL.csproj.CoreCompileInputs.cache
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\BLL\obj\Debug\net9.0\BLL.sourcelink.json
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\BLL\obj\Debug\net9.0\BLL.csproj.Up2Date
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\BLL\obj\Debug\net9.0\BLL.dll
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\BLL\obj\Debug\net9.0\refint\BLL.dll

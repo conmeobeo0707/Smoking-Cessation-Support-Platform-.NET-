@@ -1,0 +1,74 @@
+- Hiện tại có 3 role chính là Admin(Mạnh), Member(Duy + Hoàng) với Coach(Vy + authen)
+- Mạnh: Admin
++ Admin Dashboard và các api trang admin
++ API: GET /api/admin/users	Lấy danh sách tất cả user
+GET /api/admin/users/{userId}	Lấy thông tin chi tiết user
+PUT /api/admin/users/{userId}/update-role-status	Cập nhật role hoặc trạng thái
+POST /api/achievement-badge	Tạo huy hiệu mới
+GET /api/achievement-badge	Lấy danh sách huy hiệu
+GET /api/achievement-badge/{id}	Xem chi tiết huy hiệu
+POST /api/member-packages	Tạo gói thành viên
+GET /api/member-packages	Xem danh sách gói thành viên
+GET /api/member-packages/{id}	Xem chi tiết gói thành viên
+POST /api/cigarette-packages	Tạo gói thuốc
+PUT /api/cigarette-packages/{id}	Cập nhật gói thuốc
+DELETE /api/cigarette-packages/{id}	Xóa gói thuốc
+GET /api/posts	Lấy tất cả bài viết công khai
+GET /api/posts/user/{userId}	Lấy bài viết theo người dùng
+POST /api/notifications	Gửi thông báo
+
+- Vy: Coach Dashboard, api coach, các api xác thực
++ API Authen:
+POST /api/auth/login	Đăng nhập(tui Mạnh làm rồi)
+POST /api/auth/register	Đăng ký
+POST /api/auth/email/resend-otp	Gửi lại OTP
+POST /api/auth/email/verify	Xác minh email
+POST /api/auth/google	Đăng nhập qua Google 
++ API Coach:
+GET /api/quit-plan/user/{userId}	Danh sách kế hoạch theo user
+GET /api/quit-plan/{planId}	Chi tiết kế hoạch
+PUT /api/quit-plan/{planId}/coach	Huấn luyện viên cập nhật kế hoạch\
+POST /api/notifications	Gửi thông báo cho user
+
+
+- Duy: Member Dashboard và các api member
++ API: Kế hoạch cai thuốc:
+POST /api/quit-plan	Tạo kế hoạch cai thuốc
+GET /api/quit-plan/user/{userId}	Danh sách kế hoạch của mình
+GET /api/quit-plan/{planId}	Chi tiết kế hoạch
+GET /api/quit-plan/user/{userId}/current	Lấy kế hoạch đang hoạt động
+GET /api/quit-plan/free	Lấy kế hoạch miễn phí
+PUT /api/quit-plan/{planId}/user	Cập nhật kế hoạch
+PUT /api/quit-plan/{planId}/cancel	Hủy kế hoạch
+PUT /api/quit-plan/{planId}/complete	Hoàn thành kế hoạch
+DELETE /api/quit-plan/{planId}/user/{userId}	Xóa kế hoạch
++ APIHuy hiệu cá nhân:
+GET /api/user_badge/user/{userId}	Lấy danh sách huy hiệu đạt được
+GET /api/user_badge/{userBadgeId}	Chi tiết huy hiệu
+POST /api/user_badge/{id}/share	Chia sẻ huy hiệu
++ POST /api/rating	Tạo đánh giá kế hoạch
+
+
+- Hoàng: Member Dashboard và các api member
++ API Bài viết & bình luận:
+POST /api/posts	Tạo bài viết
+GET /api/posts	Danh sách bài viết công khai
+GET /api/posts/user/{userId}	Bài viết cá nhân
+GET /api/posts/{postId}	Chi tiết bài viết
+POST /api/posts/{postId}/comments	Viết bình luận
+GET /api/posts/{postId}/comments	Danh sách bình luận
+GET /api/posts/{postId}/comments/{commentId}	Chi tiết bình luận
+PUT /api/posts/{postId}/comments/{commentId}	Cập nhật bình luận
++ Thanh toán:
+POST /api/payment	Tạo URL thanh toán VNPay
+GET /api/payment/vnpay-return	Xử lý callback
+GET /api/payment/status	Kiểm tra giao dịch
++ GET /api/notifications/me	Danh sách thông báo của user
++ Trạng thái hút thuốc:
+POST /api/smoking-status	Tạo trạng thái hút thuốc
+PUT /api/smoking-status	Cập nhật trạng thái hút thuốc
+mvnw.cmd spring-boot:run
+
+- Hiện tại trong project tui đã chia ra 4 window: main(trang chính cho guess), login, admin, member
+- Mọi người làm thì làm trang của mình nha, riêng Duy với Hoàng trao đổi làm chung nha vì cùng chức năng cho member(có thể tạo thêm window nếu phù hợp)
+- Mng pull code về làm trong nhánh của mình nha, làm xong push lên gửi pull request rồi tui merge vô nha (làm những gì, chức năng gì mng commit rõ nhé)

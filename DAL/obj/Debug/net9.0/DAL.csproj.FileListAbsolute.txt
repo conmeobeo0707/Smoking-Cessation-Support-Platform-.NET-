@@ -7,6 +7,7 @@ D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DA
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.AssemblyInfoInputs.cache
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.AssemblyInfo.cs
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.csproj.CoreCompileInputs.cache
+D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.sourcelink.json
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.dll
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\refint\DAL.dll
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\DAL\obj\Debug\net9.0\DAL.pdb

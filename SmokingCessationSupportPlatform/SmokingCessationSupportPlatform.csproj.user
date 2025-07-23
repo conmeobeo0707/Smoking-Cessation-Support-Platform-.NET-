@@ -5,13 +5,31 @@
     <Compile Update="AdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Admin\BadgeManagementPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin\CigarettePackagePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="CoachWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="LoginWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Admin\MemberPackagePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MemberWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin\NotificationManagementPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin\PostManagementPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin\UserManagement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

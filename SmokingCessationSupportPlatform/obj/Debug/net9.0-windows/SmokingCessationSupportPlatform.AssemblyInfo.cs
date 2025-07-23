@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmokingCessationSupportPlatform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80707c63026813a9a6f00c1f06528db68b2dce10")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmokingCessationSupportPlatform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmokingCessationSupportPlatform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
