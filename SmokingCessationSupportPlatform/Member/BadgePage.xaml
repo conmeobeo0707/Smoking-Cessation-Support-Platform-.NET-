@@ -1,0 +1,16 @@
+﻿<Page x:Class="SmokingCessationSupportPlatform.Member.BadgePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="BadgePage">
+    <Grid>
+        <ListView x:Name="lvBadges" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding BadgeName}" Width="150"/>
+                    <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" Width="300"/>
+                    <GridViewColumn Header="Date Achieved" DisplayMemberBinding="{Binding AchievedDate}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

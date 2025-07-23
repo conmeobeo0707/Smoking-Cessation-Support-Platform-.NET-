@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\
+E:\PRN212_GPJ\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\
 SmokingCessationSupportPlatform
 none
 false
-TRACE;DEBUG;NET;NET9_0;NETCOREAPP
-D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\App.xaml
-11-504168252
+TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+E:\PRN212_GPJ\SmokingCessationSupportPlatform\App.xaml
+151695810298
 
-14571309940
-237-1808485264
-AdminWindow.xaml;Admin\BadgeManagementPage.xaml;Admin\CigarettePackagePage.xaml;Admin\MemberPackagePage.xaml;Admin\NotificationManagementPage.xaml;Admin\PostManagementPage.xaml;Admin\UserManagement.xaml;CoachWindow.xaml;LoginWindow.xaml;MainWindow.xaml;MemberWindow.xaml;
+18-1655359121
+237-2077925616
+AdminWindow.xaml;Admin\BadgeManagementPage.xaml;Admin\CigarettePackagePage.xaml;Admin\MemberPackagePage.xaml;Admin\NotificationManagementPage.xaml;Admin\PostManagementPage.xaml;Admin\UserManagement.xaml;CoachWindow.xaml;LoginWindow.xaml;MainWindow.xaml;MemberWindow.xaml;Member\BadgePage.xaml;Member\ProfilePage.xaml;Member\ProgressPage.xaml;Member\QuitPlanPage.xaml;
 
 False
 

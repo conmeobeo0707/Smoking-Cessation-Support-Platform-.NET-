@@ -14,8 +14,9 @@
     using System.Windows.Media.Imaging;
     using System.Windows.Shapes;
     using DAL.Models;
+using SmokingCessationSupportPlatform.Member;
 
-    namespace SmokingCessationSupportPlatform
+namespace SmokingCessationSupportPlatform
     {
         /// <summary>
         /// Interaction logic for LoginWindow.xaml
