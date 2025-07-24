@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmokingCessationSupportPlatform"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800">
+        Title="LoginWindow" Height="700" Width="1200">
 
     <Window.Resources >
         <Style TargetType="Label">
@@ -24,14 +24,14 @@
     </Window.Resources>
     <Grid>
         <Canvas>
-            <Label Content="Email" Width="64" Canvas.Left="240" Canvas.Top="146"/>
-            <TextBox x:Name="txtEmail" Width="200" Canvas.Left="316" Canvas.Top="156" Height="30" >
+            <Label Content="Email" Width="64" Canvas.Left="431" Canvas.Top="268" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtEmail" Width="200" Canvas.Left="500" Canvas.Top="272" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" >
             </TextBox>
-            <Label Content="Password" Canvas.Left="198" Canvas.Top="184"/>
-            <PasswordBox x:Name="txtPassword" Width="200" Canvas.Left="317" Canvas.Top="191" Height="30">
+            <Label Content="Password" Canvas.Left="389" Canvas.Top="304" RenderTransformOrigin="1.767,3.973" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <PasswordBox x:Name="txtPassword" Width="200" Canvas.Left="500" Canvas.Top="307" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
 
             </PasswordBox>
-            <Button x:Name="btnButton" Content="Login" Canvas.Left="320" Canvas.Top="224" Width="200" Height="47" Click="btnButton_Click" />
+            <Button x:Name="btnButton" Content="Login" Canvas.Left="500" Canvas.Top="342" Width="200" Height="47" Click="btnButton_Click" HorizontalAlignment="Left" VerticalAlignment="Center" />
         </Canvas>
     </Grid>
 

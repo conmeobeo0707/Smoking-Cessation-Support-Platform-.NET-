@@ -57,7 +57,6 @@ D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupport
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\Admin\BadgeManagementPage.g.cs
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\Admin\CigarettePackagePage.g.cs
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\Admin\MemberPackagePage.g.cs
-D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\Admin\NotificationManagementPage.g.cs
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\Admin\PostManagementPage.g.cs
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\Admin\UserManagement.g.cs
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\CoachWindow.g.cs
@@ -71,7 +70,6 @@ D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupport
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\Admin\BadgeManagementPage.baml
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\Admin\CigarettePackagePage.baml
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\Admin\MemberPackagePage.baml
-D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\Admin\NotificationManagementPage.baml
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\Admin\PostManagementPage.baml
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\Admin\UserManagement.baml
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\obj\Debug\net9.0-windows\CoachWindow.baml

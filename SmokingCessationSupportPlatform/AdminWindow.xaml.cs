@@ -11,7 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BLL.Service;
 using DAL.Models;
+using SmokingCessationSupportPlatform.Admin;
 
 namespace SmokingCessationSupportPlatform
 {
@@ -24,6 +26,43 @@ namespace SmokingCessationSupportPlatform
         public AdminWindow()
         {
             InitializeComponent();
+            
+        }
+
+        private void btnUser_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(new UserManagement());
+        }
+
+        private void btnBadge_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(new BadgeManagementPage());
+        }
+
+        private void btnMemberPackage_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(new MemberPackagePage());
+        }
+
+        private void btnCigarette_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(new CigarettePackagePage());
+        }
+
+        private void btnPost_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(new PostManagementPage());
+        }
+
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            ApiClient.ClearToken();
+
+            LoginWindow loginWindow = new LoginWindow();  
+            loginWindow.Show();
+
+            this.Close();
         }
     }
 }

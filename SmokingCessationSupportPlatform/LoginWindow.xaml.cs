@@ -13,7 +13,8 @@
     using System.Windows.Media;
     using System.Windows.Media.Imaging;
     using System.Windows.Shapes;
-    using DAL.Models;
+using BLL.Service;
+using DAL.Models;
 
     namespace SmokingCessationSupportPlatform
     {
@@ -71,6 +72,8 @@
 
                         if(loginResult != null)
                         {
+
+                            ApiClient.setToken(loginResult.Token);
                             string role = loginResult.Role;
 
                              if(role == "ADMIN")

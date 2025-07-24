@@ -27,8 +27,6 @@ namespace SmokingCessationSupportPlatform.Admin
         public BadgeManagementPage()
         {
             InitializeComponent();
-            string hardcodeToken = "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI0IiwiaWF0IjoxNzUzMjY0NzUwLCJleHAiOjE3NTMzNTExNTAsInJvbGVzIjpbIlJPTEVfQURNSU4iXX0.xdD8mFawTR8raCus_LFJNN0-HP0JS03QFrP0-iRrp-O8VGMj4Hsh5BsTUUEGVpks";
-            ApiClient.setToken(hardcodeToken);
             LoadBadge();
         }
 
