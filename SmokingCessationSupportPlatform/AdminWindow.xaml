@@ -8,7 +8,7 @@
         Title="AdminWindow" Height="700" Width="1200">
     <Grid>
         <!-- Sidebar -->
-        <Grid Width="220" Background="#111827" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+        <Grid Width="220" Background="#FF388E3C" VerticalAlignment="Stretch" HorizontalAlignment="Left">
             <StackPanel Margin="20 30" VerticalAlignment="Top" >
                 <TextBlock Text="Admin Panel" Foreground="White" FontSize="20" FontWeight="Bold" Margin="0 0 0 30"/>
 
@@ -22,7 +22,7 @@
         </Grid>
 
         <!-- Header -->
-        <Grid Margin="220,0,0,0" Height="60" VerticalAlignment="Top" Background="#1F2937">
+        <Grid Margin="220,0,0,0" Height="60" VerticalAlignment="Top" Background="#FF388E3C">
             <TextBlock Text="Bảng điều khiển quản trị" Foreground="White" FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center" Margin="20,0,0,0"/>
         </Grid>
 
