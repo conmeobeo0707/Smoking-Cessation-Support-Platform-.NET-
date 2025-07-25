@@ -1,17 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 
-namespace DAL.Models
+public class UserBadge
 {
-    public class UserBadge
-    {
-        public int Id { get; set; }
-        public int UserId { get; set; }
-        public int BadgeId { get; set; }
-        public DateTime? AchievedDate { get; set; }
-        public bool? IsShared { get; set; }
-    }
+    public int Id { get; set; }
+    public int UserId { get; set; }
+    public int BadgeId { get; set; }
+
+    [JsonPropertyName("achievedDate")]
+    public DateTime? AchievedDate { get; set; }
+
+    [JsonPropertyName("shared")]
+    public bool? IsShared { get; set; }
+
+    [JsonPropertyName("badgeName")]
+    public string BadgeName { get; set; }
+
+    [JsonPropertyName("description")]
+    public string Description { get; set; }
 }
