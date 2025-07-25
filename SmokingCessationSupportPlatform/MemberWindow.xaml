@@ -1,12 +1,36 @@
 ﻿<Window x:Class="SmokingCessationSupportPlatform.MemberWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SmokingCessationSupportPlatform"
-        mc:Ignorable="d"
         Title="MemberWindow" Height="450" Width="800">
+
     <Grid>
-        
+        <!-- Sidebar -->
+        <Grid Width="220" Background="#1B2631" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+            <StackPanel Margin="20 30" VerticalAlignment="Top">
+                <TextBlock Text="Member Panel" Foreground="White" FontSize="20" FontWeight="Bold" Margin="0 0 0 30"/>
+                <Button Content="🏠 Dashboard" Click="Dashboard_Click" Margin="0 5" Padding="10"
+                        Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left"/>
+                <Button Content="📝 Bài viết" Click="Post_Click" Margin="0 5" Padding="10"
+                        Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left"/>
+                <Button Content="🏅 Huy hiệu" Click="Achievement_Click" Margin="0 5" Padding="10"
+                        Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left"/>
+                <Button Content="🔔 Thông báo" Click="Notification_Click" Margin="0 5" Padding="10"
+                        Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left"/>
+                <Button Content="🚬 Trạng thái hút thuốc" Click="SmokingStatus_Click" Margin="0 5" Padding="10"
+                        Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left"/>
+                <Button Content="🚪 Đăng xuất" Click="Logout_Click" Margin="0 5" Padding="10"
+                        Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Header -->
+        <Grid Margin="220,0,0,0" Height="60" VerticalAlignment="Top" Background="#283747">
+            <TextBlock x:Name="txtGreeting" Foreground="White" FontSize="18" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        </Grid>
+
+        <!-- Main Content -->
+        <Border Margin="220,60,0,0" Background="White" CornerRadius="10" Padding="20">
+            <Frame x:Name="MainContent" NavigationUIVisibility="Hidden" Margin="-20,0,0,0"/>
+        </Border>
     </Grid>
 </Window>

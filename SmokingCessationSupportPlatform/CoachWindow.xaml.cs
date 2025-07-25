@@ -1,29 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using DAL.Models;
+using SmokingCessationSupportPlatform.Helpers;
 
 namespace SmokingCessationSupportPlatform
 {
-    /// <summary>
-    /// Interaction logic for CoachWindow.xaml
-    /// </summary>
     public partial class CoachWindow : Window
     {
         public UserModel Account { get; set; }
-        public CoachWindow()
+
+        public CoachWindow(UserModel account)
         {
             InitializeComponent();
+            Account = account;
+
+            // Lưu vào context nếu cần
+            AuthContext.UserId = account.UserId;
+            AuthContext.Role = account.Role;
+            AuthContext.FullName = account.FullName;
+            AuthContext.Email = account.Email;
+
+            this.Title = $"Coach - {account.FullName}";
         }
     }
 }

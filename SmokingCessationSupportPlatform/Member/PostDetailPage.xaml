@@ -1,0 +1,36 @@
+﻿<Window x:Class="SmokingCessationSupportPlatform.Member.PostDetailPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Chi tiết bài viết" Height="550" Width="681"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0 8 0 4"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="{Binding WindowTitle}" FontSize="24" FontWeight="Bold" Foreground="#2E7D32" Margin="0 0 0 20"/>
+
+            <Label Content="Tiêu đề:"/>
+            <TextBox x:Name="txtTitle" Height="30"/>
+
+            <Label Content="Nội dung:"/>
+            <TextBox x:Name="txtContent" AcceptsReturn="True" Height="150" TextWrapping="Wrap"/>
+
+            <Label Content="Tác giả:"/>
+            <TextBox x:Name="txtAuthor" Height="30" IsReadOnly="True"/>
+
+            <Label Content="Ngày đăng:"/>
+            <TextBox x:Name="txtCreatedAt" Height="30" IsReadOnly="True"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0 20 0 0" HorizontalAlignment="Right">
+                <Button Content="💾 Lưu" Width="100" Click="btnSave_Click" Margin="0 0 10 0"/>
+                <Button Content="✖ Đóng" Width="100" Click="btnClose_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

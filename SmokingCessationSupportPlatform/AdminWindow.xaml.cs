@@ -1,29 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using DAL.Models;
+using SmokingCessationSupportPlatform.Helpers;
 
 namespace SmokingCessationSupportPlatform
 {
-    /// <summary>
-    /// Interaction logic for AdminWindow.xaml
-    /// </summary>
     public partial class AdminWindow : Window
     {
         public UserModel Account { get; set; }
-        public AdminWindow()
+
+        public AdminWindow(UserModel account)
         {
             InitializeComponent();
+            Account = account;
+
+            // Gán dữ liệu vào context nếu muốn dùng sau
+            AuthContext.UserId = account.UserId;
+            AuthContext.Role = account.Role;
+            AuthContext.FullName = account.FullName;
+            AuthContext.Email = account.Email;
+
+            this.Title = $"Admin - {account.FullName}";
         }
     }
 }

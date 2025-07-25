@@ -1,0 +1,50 @@
+﻿<Page x:Class="SmokingCessationSupportPlatform.Member.DashboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="DashboardPage">
+
+    <ScrollViewer Background="#F4F6F9">
+        <StackPanel Margin="20">
+            <TextBlock Text="📊 Bảng điều khiển" FontSize="28" FontWeight="Bold" Foreground="#2E7D32" Margin="0 0 0 25"/>
+
+            <!-- Thông tin người dùng, ngày cai thuốc, huy hiệu -->
+            <UniformGrid Columns="3" Margin="0 0 0 20">
+                <Border Background="#E8F5E9" Padding="20" Margin="10" CornerRadius="12">
+                    <StackPanel>
+                        <TextBlock x:Name="txtName" FontSize="18" FontWeight="Bold" Foreground="#1B5E20"/>
+                        <TextBlock x:Name="txtEmail" FontSize="14" Foreground="Gray"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="#FFF3E0" Padding="20" Margin="10" CornerRadius="12">
+                    <StackPanel>
+                        <TextBlock Text="📅 Ngày không hút thuốc" FontSize="16" FontWeight="SemiBold"/>
+                        <TextBlock x:Name="txtSmokeFreeDays" Text="12 ngày" FontSize="26" Foreground="#F57C00" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="#E3F2FD" Padding="20" Margin="10" CornerRadius="12">
+                    <StackPanel>
+                        <TextBlock Text="🏅 Huy hiệu đã đạt" FontSize="16" FontWeight="SemiBold"/>
+                        <TextBlock x:Name="txtBadgeCount" Text="--" FontSize="26" Foreground="#1976D2" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+
+            <!-- Danh sách thông báo gần đây -->
+            <TextBlock Text="🔔 Thông báo gần đây" FontSize="20" FontWeight="SemiBold" Margin="0 10"/>
+            <ItemsControl x:Name="RecentNotifications">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="White" BorderBrush="#D6DBDF" BorderThickness="1" CornerRadius="8" Margin="0 0 0 10" Padding="10">
+                            <StackPanel>
+                                <TextBlock Text="{Binding Content}" FontSize="14" TextWrapping="Wrap"/>
+                                <TextBlock Text="{Binding SendDate, StringFormat='📅 {0:dd/MM/yyyy HH:mm}'}" FontSize="12" Foreground="Gray" Margin="0 5 0 0"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

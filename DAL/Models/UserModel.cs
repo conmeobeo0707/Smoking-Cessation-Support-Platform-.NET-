@@ -9,12 +9,12 @@ namespace DAL.Models
     public class UserModel
     {
         public int UserId { get; set; }
-        public string UserPublicId { get; set; }
-        public string FullName { get; set; }
-        public string Email { get; set; }
-        public string Role { get; set; }
-        public string Status { get; set; }
-        public string Token { get; set; }
-        public string TokenType { get; set; }
+        public string UserPublicId { get; set; } = string.Empty;
+        public string FullName { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Role { get; set; } = string.Empty;
+        public string Status { get; set; } = string.Empty;
+        public string Token { get; set; } = string.Empty;
+        public string TokenType { get; set; } = string.Empty;
     }
 }
