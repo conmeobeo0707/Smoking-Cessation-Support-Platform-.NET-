@@ -38,11 +38,12 @@
 
             <!-- Tìm kiếm -->
             <StackPanel Orientation="Horizontal" Margin="0 10 0 0" VerticalAlignment="Center">
-                <Label Content="Nhập tên người dùng:" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtSearch" Width="200" Height="30" Margin="5 0"/>
-                <Button Content="Search" Width="60" Height="30" Margin="5 0"/>
-                <Button Content="Clear" Width="80" Height="30" Margin="5 0" />
+                <Label Content="Enter User ID to Search:" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtUserId" Width="200" Height="30" Margin="5 0"/>
+                <Button Content="Search" Width="60" Height="30" Margin="5 0" Click="Button_Click"/>
+                <Button Content="Clear" Width="80" Height="30" Margin="5 0" Click="Button_Click_1" />
             </StackPanel>
+            
         </StackPanel>
     </Grid>
 </Window>
