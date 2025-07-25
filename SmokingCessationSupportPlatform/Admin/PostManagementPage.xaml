@@ -5,28 +5,30 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SmokingCessationSupportPlatform"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1200"
       Title="PostManagementPage">
 
     <Grid Background="White">
         <StackPanel Margin="20">
             <TextBlock Text="Quản lý Bài viết" FontSize="24" FontWeight="Bold" Margin="0 0 0 20"/>
 
-            <DataGrid x:Name="PostsDataGrid" AutoGenerateColumns="False" Height="450">
+            <DataGrid x:Name="dgPost" AutoGenerateColumns="False" CanUserAddRows="False" Height="193">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding PostId}" Width="60"/>
-                    <DataGridTextColumn Header="Tiêu đề" Binding="{Binding Title}" Width="250"/>
-                    <DataGridTextColumn Header="Người đăng" Binding="{Binding AuthorName}" Width="200"/>
-                    <DataGridTextColumn Header="Ngày đăng" Binding="{Binding CreatedAt}" Width="120"/>
-                    <DataGridTemplateColumn Header="Hành động" Width="100">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Content="Xem"  Tag="{Binding PostId}" />
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Post Id" Binding="{Binding PostId}" Width="60"/>
+                    <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="170"/>
+                    <DataGridTextColumn Header="Content" Binding="{Binding Content}" Width="*"/>
+                    <DataGridTextColumn Header="PostDate" Binding="{Binding PostDate}" Width="100"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="80"/>
+                    <DataGridTextColumn Header="User Id" Binding="{Binding UserId}" Width="50"/>
+                    <DataGridTextColumn Header="User Name" Binding="{Binding UserName}" Width="80"/>
                 </DataGrid.Columns>
             </DataGrid>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Enter User ID to Search Post" />
+                <TextBox x:Name="txtSearch" Width="200" Height="30"/>
+                <Button x:Name="btnSearch" Content="Search" Height="30" Width="60" Click="btnSearch_Click"   />
+                <Button x:Name="btnClear" Content="Clear" Height="30" Width="60" Click="btnClear_Click"    />
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

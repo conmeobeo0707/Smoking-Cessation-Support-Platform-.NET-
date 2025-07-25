@@ -5,30 +5,49 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SmokingCessationSupportPlatform"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1200"
       Title="MemberPackagePage">
 
     <Grid Background="White">
         <StackPanel Margin="20">
             <TextBlock Text="Quản lý gói thành viên" FontSize="24" FontWeight="Bold" Margin="0 0 0 20" />
 
-            <Button Content="➕ Tạo gói mới" Width="200" Margin="0 0 0 20" />
+            <Button Content="➕ Tạo gói mới" Width="200" Margin="0 0 0 20" Click="Button_Click" />
 
-            <DataGrid x:Name="MemberPackagesDataGrid" AutoGenerateColumns="False" Height="400">
+            <DataGrid x:Name="dgMemberPackage" AutoGenerateColumns="False" CanUserAddRows="False" Height="163">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding PackageId}" Width="50"/>
-                    <DataGridTextColumn Header="Tên gói" Binding="{Binding PackageName}" Width="200"/>
-                    <DataGridTextColumn Header="Giá" Binding="{Binding Price}" Width="100"/>
-                    <DataGridTextColumn Header="Thời hạn (ngày)" Binding="{Binding DurationDays}" Width="150"/>
-                    <DataGridTemplateColumn Header="Hành động" Width="100">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Content="Xem"  Tag="{Binding PackageId}" />
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="MemberPackage Id" Binding="{Binding MemberPackageId}" Width="150"/>
+                    <DataGridTextColumn Header="Backage Name" Binding="{Binding PackageName}" Width="*"/>
+                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*"/>
+                    <DataGridTextColumn Header="Duration" Binding="{Binding Duration}" Width="150"/>
+                    <DataGridTextColumn Header="Features Description" Binding="{Binding FeaturesDescription}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Enter Member Package ID to Search" />
+                <TextBox x:Name="txtSearch" Width="200" Height="30"/>
+                <Button x:Name="btnSearch" Content="Search" Height="30" Width="60" Click="btnSearch_Click"  />
+                <Button x:Name="btnClear" Content="Clear" Height="30" Width="60" Click="btnClear_Click"   />
+            </StackPanel>
+            <StackPanel x:Name="spInputForm" Visibility="Collapsed"  >
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Package Name" Width="120" />
+                    <TextBox x:Name="txtPackageName" Width="200" Height="30"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Price" Width="120" />
+                    <TextBox x:Name="txtPrice" Width="200" Height="30"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Duration" Width="120"/>
+                    <TextBox x:Name="txtDuration" Width="200" Height="30"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Features Description" Width="120"/>
+                    <TextBox x:Name="txtDescription" Width="200" Height="30"/>
+                    <Button x:Name="btnCreate" Content="Create" Width="60" Height="30" Background="Green" Click="btnCreate_Click" />
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

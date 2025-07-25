@@ -4,34 +4,64 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SmokingCessationSupportPlatform"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      mc:Ignorable="d"  Loaded="Page_Loaded"
+      d:DesignHeight="700" d:DesignWidth="1200"
       Title="CigarettePackagePage">
 
     <Grid Background="White">
         <StackPanel Margin="20">
             <TextBlock Text="Quản lý Gói thuốc" FontSize="24" FontWeight="Bold" Margin="0 0 0 20" />
 
-            <Button Content="➕ Tạo gói thuốc mới" Width="200" Margin="0 0 0 20" />
+            <Button Content="➕ Tạo gói thuốc mới" Width="200" Margin="0 0 0 20" Click="Button_Click" />
 
-            <DataGrid x:Name="CigarettePackagesDataGrid" AutoGenerateColumns="False" Height="400">
+            <DataGrid x:Name="dgCigarette" AutoGenerateColumns="False" CanUserAddRows="False" Height="158">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding PackageId}" Width="60"/>
-                    <DataGridTextColumn Header="Tên gói" Binding="{Binding PackageName}" Width="200"/>
-                    <DataGridTextColumn Header="Mô tả" Binding="{Binding Description}" Width="300"/>
-                    <DataGridTextColumn Header="Giá tiền" Binding="{Binding Price}" Width="100"/>
-                    <DataGridTemplateColumn Header="Hành động" Width="140">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <Button Content="✏️" Margin="5,0" Tag="{Binding PackageId}"/>
-                                    <Button Content="🗑️" Margin="5,0" Tag="{Binding PackageId}" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Cigarette Id" Binding="{Binding CigaretteId}" Width="60"/>
+                    <DataGridTextColumn Header="Cigarette Name" Binding="{Binding CigaretteName}" Width="200"/>
+                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="300"/>
+                    <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" Width="100"/>
+                    <DataGridTextColumn Header="Nicotene Strength" Binding="{Binding NicoteneStrength}" Width="100"/>
+                    <DataGridTextColumn Header="Flavor" Binding="{Binding Flavor}" Width="100"/>
+                    <DataGridTextColumn Header="Sticks Per Pack" Binding="{Binding SticksPerPack}" Width="100"/>
+                    <DataGridTextColumn Header="Nicotine Mg" Binding="{Binding NicotineMg}" Width="100"/>
                 </DataGrid.Columns>
             </DataGrid>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Enter Cigarette ID to Search" />
+                <TextBox x:Name="txtSearch" Width="200" Height="30"/>
+                <Button x:Name="btnSearch" Content="Search" Height="30" Width="60" Click="btnSearch_Click"   />
+                <Button x:Name="btnClear" Content="Clear" Height="30" Width="60" Click="btnClear_Click"  />
+                <Button x:Name="btnUpdate" Content="Update" Width="100" Height="30" Background="Yellow" Click="btnUpdate_Click"  />
+                <Button x:Name="btnDelete" Content="Delete" Width="100" Height="30" Background="Red" Click="btnDelete_Click"  />
+            </StackPanel>
+            <StackPanel x:Name="spInputForm" Visibility="Collapsed"  >
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Cigarette Name" Width="120" />
+                    <TextBox x:Name="txtCigaretteName" Width="200" Height="30"/>
+                    <Label Content="Flavor" Width="120"/>
+                    <TextBox x:Name="txtFlavor" Width="200" Height="30"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Price" Width="120" />
+                    <TextBox x:Name="txtPrice" Width="200" Height="30"/>
+                    <Label Content="Sticks Per Pack" Width="120" />
+                    <TextBox x:Name="txtSticks" Width="200" Height="30"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Brand" Width="120"/>
+                    <TextBox x:Name="txtBrand" Width="200" Height="30"/>
+                    <Label Content="Nicotine Mg" Width="120"/>
+                    <TextBox x:Name="txtNicotineMg" Width="200" Height="30"/>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Nicotene Strength" Width="120"/>
+                    <TextBox x:Name="txtStrength" Width="200" Height="30"/>
+                    <Button x:Name="btnCreate" Content="Create" Width="100" Height="30" Background="Green" Click="btnCreate_Click"  />
+                </StackPanel>
+                
+            </StackPanel>
+            
         </StackPanel>
     </Grid>
 </Page>

@@ -1,7 +1,12 @@
 ﻿<Application x:Class="SmokingCessationSupportPlatform.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+<<<<<<< HEAD
              StartupUri="Member/CreatePostWindow.xaml">
+=======
+             xmlns:local="clr-namespace:SmokingCessationSupportPlatform"
+             StartupUri="LoginWindow.xaml">
+>>>>>>> ab0fb5ae47ced4f733cdeaed9ed8ac429ac048c0
     <Application.Resources>
     </Application.Resources>
 </Application>

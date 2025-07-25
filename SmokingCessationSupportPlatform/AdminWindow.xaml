@@ -5,30 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmokingCessationSupportPlatform"
         mc:Ignorable="d"
-        Title="AdminWindow" Height="450" Width="800">
+        Title="AdminWindow" Height="700" Width="1200">
     <Grid>
         <!-- Sidebar -->
-        <Grid Width="220" Background="#111827" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+        <Grid Width="220" Background="#FF388E3C" VerticalAlignment="Stretch" HorizontalAlignment="Left">
             <StackPanel Margin="20 30" VerticalAlignment="Top" >
                 <TextBlock Text="Admin Panel" Foreground="White" FontSize="20" FontWeight="Bold" Margin="0 0 0 30"/>
 
-                <Button Content="👥 Người dùng"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand"/>
-                <Button Content="🏅 Huy hiệu"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand"/>
-                <Button Content="🎁 Gói thành viên"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand"/>
-                <Button Content="🚬 Gói thuốc"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand"/>
-                <Button Content="📝 Bài viết"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand"/>
-                <Button Content="🔔 Thông báo"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand"/>
+                <Button Content="👥 Người dùng" x:Name="btnUser"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnUser_Click"/>
+                <Button Content="🏅 Huy hiệu" x:Name="btnBadge"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnBadge_Click"/>
+                <Button Content="🎁 Gói thành viên" x:Name="btnMemberPackage"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnMemberPackage_Click"/>
+                <Button Content="🚬 Gói thuốc" x:Name="btnCigarette"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnCigarette_Click"/>
+                <Button Content="📝 Bài viết" x:Name="btnPost"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnPost_Click"/>
+                <Button Content="             Log out" x:Name="btnLogout" Padding="10" Foreground="White" Background="Red" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnLogout_Click" />
             </StackPanel>
         </Grid>
 
         <!-- Header -->
-        <Grid Margin="220,0,0,0" Height="60" VerticalAlignment="Top" Background="#1F2937">
+        <Grid Margin="220,0,0,0" Height="60" VerticalAlignment="Top" Background="#FF388E3C">
             <TextBlock Text="Bảng điều khiển quản trị" Foreground="White" FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center" Margin="20,0,0,0"/>
         </Grid>
 
         <!-- Main Content Area -->
         <Border Margin="220,60,0,0" Background="White" CornerRadius="10" Padding="20">
-            <Frame x:Name="MainContent" NavigationUIVisibility="Hidden" />
+            <Frame x:Name="MainContent" 
+                   NavigationUIVisibility="Hidden"
+                    HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"
+                   />
         </Border>
     </Grid>
 </Window>

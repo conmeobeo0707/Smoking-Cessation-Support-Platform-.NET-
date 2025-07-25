@@ -23,9 +23,6 @@
     <Compile Update="MemberWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Admin\NotificationManagementPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Admin\PostManagementPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
