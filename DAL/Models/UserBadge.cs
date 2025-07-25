@@ -6,7 +6,7 @@ public class UserBadge
     public int UserId { get; set; }
     public int BadgeId { get; set; }
 
-    [JsonPropertyName("achievedDate")]
+    [JsonPropertyName("dateAchieved")]
     public DateTime? AchievedDate { get; set; }
 
     [JsonPropertyName("shared")]
@@ -15,6 +15,7 @@ public class UserBadge
     [JsonPropertyName("badgeName")]
     public string BadgeName { get; set; }
 
-    [JsonPropertyName("description")]
+    [JsonPropertyName("badgeDescription")]
     public string Description { get; set; }
 }
+

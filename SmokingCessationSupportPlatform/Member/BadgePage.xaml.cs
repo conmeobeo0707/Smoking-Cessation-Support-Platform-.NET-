@@ -37,7 +37,7 @@ namespace SmokingCessationSupportPlatform.Member
                 {
                     PropertyNameCaseInsensitive = true
                 });
-                lvBadges.ItemsSource = badges;
+                dgUserBadges.ItemsSource = badges;
             }
             else
             {
@@ -100,7 +100,7 @@ namespace SmokingCessationSupportPlatform.Member
 
         private void lvBadges_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            selectedBadge = lvBadges.SelectedItem as UserBadge;
+            selectedBadge = dgUserBadges.SelectedItem as UserBadge;
         }
     }
 }

@@ -6,16 +6,15 @@
         <StackPanel>
             <TextBlock Text="My Badges" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
 
-            <ListView x:Name="lvBadges" Height="300" SelectionChanged="lvBadges_SelectionChanged">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding BadgeName}" Width="150"/>
-                        <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" Width="300"/>
-                        <GridViewColumn Header="Achieved Date" DisplayMemberBinding="{Binding AchievedDate}" Width="150"/>
-                        <GridViewColumn Header="Shared" DisplayMemberBinding="{Binding Shared}" Width="80"/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
+            <DataGrid x:Name="dgUserBadges" AutoGenerateColumns="False" ItemsSource="{Binding}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding BadgeName}" Width="*" />
+                    <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="2*" />
+                    <DataGridTextColumn Header="Achieved Date" Binding="{Binding AchievedDate, StringFormat={}{0:yyyy-MM-dd}}" Width="150"/>
+                    <DataGridCheckBoxColumn Header="Shared" Binding="{Binding IsShared}" Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <Button Content="View Details" Width="120" Margin="0,0,10,0" Click="BtnViewDetails_Click"/>
