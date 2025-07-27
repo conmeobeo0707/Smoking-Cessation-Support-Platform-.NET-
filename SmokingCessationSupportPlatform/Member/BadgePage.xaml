@@ -1,0 +1,25 @@
+﻿<Page x:Class="SmokingCessationSupportPlatform.Member.BadgePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="BadgePage">
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="My Badges" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <DataGrid x:Name="dgUserBadges" AutoGenerateColumns="False" ItemsSource="{Binding}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding BadgeName}" Width="*" />
+                    <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="2*" />
+                    <DataGridTextColumn Header="Achieved Date" Binding="{Binding AchievedDate, StringFormat={}{0:yyyy-MM-dd}}" Width="150"/>
+                    <DataGridCheckBoxColumn Header="Shared" Binding="{Binding IsShared}" Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Button Content="View Details" Width="120" Margin="0,0,10,0" Click="BtnViewDetails_Click"/>
+                <Button Content="Share Badge" Width="120" Click="BtnShareBadge_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

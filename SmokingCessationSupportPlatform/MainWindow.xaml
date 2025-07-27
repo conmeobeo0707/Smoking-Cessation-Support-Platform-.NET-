@@ -1,12 +1,80 @@
 ﻿<Window x:Class="SmokingCessationSupportPlatform.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SmokingCessationSupportPlatform"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="1200">
-    <Grid>
+        Title="Smoking Cessation Support Platform" Height="700" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        Background="White">
 
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#E8F5E9" Offset="0"/>
+                <GradientStop Color="#A5D6A7" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Header -->
+            <RowDefinition Height="*"/>
+            <!-- Main Content -->
+            <RowDefinition Height="Auto"/>
+            <!-- Footer -->
+        </Grid.RowDefinitions>
+
+        <!-- ===== HEADER ===== -->
+        <Border Grid.Row="0" Background="#2C3E50" Padding="20">
+            <DockPanel>
+                <TextBlock Text="🚭 Smoking Cessation Platform"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           DockPanel.Dock="Left"/>
+
+                <Button Content="Login"
+                        Width="90"
+                        Height="30"
+                        Background="#3498DB"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        
+                        BorderThickness="0"
+                        Margin="10,0,0,0"
+                        HorizontalAlignment="Right"
+                        DockPanel.Dock="Right" Click="Button_Click"/>
+            </DockPanel>
+        </Border>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="700">
+            <TextBlock Text="Welcome to" 
+                       FontSize="26" 
+                       FontWeight="Light" 
+                       Foreground="#555" 
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Smoking Cessation Support Platform" 
+                       FontSize="36" 
+                       FontWeight="Bold" 
+                       Foreground="#2C3E50" 
+                       HorizontalAlignment="Center"
+                       Margin="0,10,0,30"/>
+
+            <TextBlock TextWrapping="Wrap" 
+                       TextAlignment="Center" 
+                       FontSize="18" 
+                       Foreground="#444" 
+                       Margin="30,0">
+                Our platform helps smokers build personalized quit plans, track progress, receive expert coaching, and find strength in community support. 
+                Take the first step toward a smoke-free life today!
+            </TextBlock>
+        </StackPanel>
+
+        <!-- ===== FOOTER ===== -->
+        <Border Grid.Row="2" Background="#ecf0f1" Padding="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="© 2025 Smoking Cessation Platform | " Foreground="#555" />
+                <TextBlock Text="Contact: support@quitnow.com" Foreground="#555"/>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

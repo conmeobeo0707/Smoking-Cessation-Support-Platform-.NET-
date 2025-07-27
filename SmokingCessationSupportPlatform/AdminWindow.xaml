@@ -6,33 +6,47 @@
         xmlns:local="clr-namespace:SmokingCessationSupportPlatform"
         mc:Ignorable="d"
         Title="AdminWindow" Height="700" Width="1200">
+
+    <Window.Resources>
+        <!-- Gradient Brush giống Member -->
+        <LinearGradientBrush x:Key="HeaderSidebarBackground" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#E8F5E9" Offset="0"/>
+            <GradientStop Color="#A5D6A7" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+
     <Grid>
         <!-- Sidebar -->
-        <Grid Width="220" Background="#FF388E3C" VerticalAlignment="Stretch" HorizontalAlignment="Left">
-            <StackPanel Margin="20 30" VerticalAlignment="Top" >
-                <TextBlock Text="Admin Panel" Foreground="White" FontSize="20" FontWeight="Bold" Margin="0 0 0 30"/>
+        <Grid Width="220" Background="{StaticResource HeaderSidebarBackground}" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+            <StackPanel Margin="20 30" VerticalAlignment="Top">
+                <TextBlock Text="Admin Panel" Foreground="#2C3E50" FontSize="20" FontWeight="Bold" Margin="0 0 0 30"/>
 
-                <Button Content="👥 Người dùng" x:Name="btnUser"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnUser_Click"/>
-                <Button Content="🏅 Huy hiệu" x:Name="btnBadge"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnBadge_Click"/>
-                <Button Content="🎁 Gói thành viên" x:Name="btnMemberPackage"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnMemberPackage_Click"/>
-                <Button Content="🚬 Gói thuốc" x:Name="btnCigarette"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnCigarette_Click"/>
-                <Button Content="📝 Bài viết" x:Name="btnPost"  Margin="0 5" Padding="10" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnPost_Click"/>
-                <Button Content="             Log out" x:Name="btnLogout" Padding="10" Foreground="White" Background="Red" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnLogout_Click" />
+                <Button Content="👥 Người dùng" x:Name="btnUser" Margin="0 5" Padding="10"
+                        Foreground="#2C3E50" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnUser_Click"/>
+                <Button Content="🏅 Huy hiệu" x:Name="btnBadge" Margin="0 5" Padding="10"
+                        Foreground="#2C3E50" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnBadge_Click"/>
+                <Button Content="🎁 Gói thành viên" x:Name="btnMemberPackage" Margin="0 5" Padding="10"
+                        Foreground="#2C3E50" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnMemberPackage_Click"/>
+                <Button Content="🚬 Gói thuốc" x:Name="btnCigarette" Margin="0 5" Padding="10"
+                        Foreground="#2C3E50" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnCigarette_Click"/>
+                <Button Content="📝 Bài viết" x:Name="btnPost" Margin="0 5" Padding="10"
+                        Foreground="#2C3E50" Background="Transparent" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnPost_Click"/>
+                <Button Content="             Log out" x:Name="btnLogout" Padding="10"
+                        Foreground="White" Background="Red" BorderBrush="Transparent" HorizontalContentAlignment="Left" FontSize="14" Cursor="Hand" Click="btnLogout_Click"/>
             </StackPanel>
         </Grid>
 
         <!-- Header -->
-        <Grid Margin="220,0,0,0" Height="60" VerticalAlignment="Top" Background="#FF388E3C">
-            <TextBlock Text="Bảng điều khiển quản trị" Foreground="White" FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <Grid Margin="220,0,0,0" Height="60" VerticalAlignment="Top" Background="{StaticResource HeaderSidebarBackground}">
+            <TextBlock Text="Bảng điều khiển quản trị" Foreground="#2C3E50" FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center" Margin="20,0,0,0"/>
         </Grid>
 
         <!-- Main Content Area -->
         <Border Margin="220,60,0,0" Background="White" CornerRadius="10" Padding="20">
-            <Frame x:Name="MainContent" 
+            <Frame x:Name="MainContent"
                    NavigationUIVisibility="Hidden"
-                    HorizontalAlignment="Stretch"
-                   VerticalAlignment="Stretch"
-                   />
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"/>
         </Border>
     </Grid>
 </Window>

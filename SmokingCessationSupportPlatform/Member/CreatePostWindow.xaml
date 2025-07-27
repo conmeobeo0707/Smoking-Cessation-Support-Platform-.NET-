@@ -1,0 +1,18 @@
+﻿<Window x:Class="SmokingCessationSupportPlatform.Member.CreatePostWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tạo bài viết mới" Height="400" Width="500"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Tiêu đề" FontWeight="SemiBold"/>
+            <TextBox x:Name="txtTitle" Height="30" Margin="0 0 0 10"/>
+
+            <TextBlock Text="Nội dung" FontWeight="SemiBold"/>
+            <TextBox x:Name="txtContent" Height="150" TextWrapping="Wrap"
+                     AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+
+            <Button Content="📝 Đăng bài viết" Height="35" Width="150" Margin="0 20 0 0" HorizontalAlignment="Center" Click="btnSubmit_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

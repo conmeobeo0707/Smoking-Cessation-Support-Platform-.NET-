@@ -1,0 +1,99 @@
+﻿<Page x:Class="SmokingCessationSupportPlatform.Member.QuitPlanPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="QuitPlanPage">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="20">
+            <StackPanel>
+                <TextBlock Text="Quit Plans Management" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                <!-- Top Buttons -->
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Button Content="Load My Plans" Width="120" Click="BtnLoadMyPlans_Click" Margin="0,0,10,0"/>
+                    <Button Content="Load Current Plan" Width="150" Click="BtnLoadCurrentPlan_Click" Margin="0,0,10,0"/>
+                    <Button Content="Load Free Plans" Width="150" Click="BtnLoadFreePlans_Click" Margin="0,0,10,0"/>
+                </StackPanel>
+
+                <!-- DataGrid -->
+                <DataGrid x:Name="dgQuitPlans" AutoGenerateColumns="False" Height="300" Width="832" SelectionMode="Single" SelectionChanged="dgQuitPlans_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                        <DataGridTextColumn Header="Plan Name" Binding="{Binding PlanName}" Width="*" />
+                        <DataGridTextColumn Header="Start Date" Binding="{Binding StartDate}" Width="100"/>
+                        <DataGridTextColumn Header="End Date" Binding="{Binding EndDate}" Width="100"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!-- Plan Actions -->
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                    <Button Content="Update Plan" Click="BtnUpdatePlan_Click"/>
+                    <Button Content="Cancel Plan" Click="BtnCancelPlan_Click"/>
+                    <Button Content="Complete Plan" Click="BtnCompletePlan_Click"/>
+                    <Button Content="Delete Plan" Click="BtnDeletePlan_Click"/>
+                </StackPanel>
+
+                <!-- Add Plan Form -->
+                <TextBlock Text="Create New Plan" FontSize="16" FontWeight="Bold" Margin="0,20,0,10"/>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Title:"/>
+                    <TextBox x:Name="txtTitle"/>
+
+                    <TextBlock Text="Start Date:"/>
+                    <DatePicker x:Name="dpStartDate"/>
+
+                    <TextBlock Text="Expected End Date:"/>
+                    <DatePicker x:Name="dpEndDate"/>
+
+                    <TextBlock Text="Status:"/>
+                    <ComboBox x:Name="cbStatus">
+                        <ComboBoxItem Content="IN_PROGRESS"/>
+                        <ComboBoxItem Content="COMPLETED"/>
+                        <ComboBoxItem Content="CANCELLED"/>
+                    </ComboBox>
+
+                    <TextBlock Text="Reason:"/>
+                    <TextBox x:Name="txtReason"/>
+
+                    <TextBlock Text="Stages Description:"/>
+                    <TextBox x:Name="txtStagesDescription"/>
+
+                    <TextBlock Text="Custom Notes:"/>
+                    <TextBox x:Name="txtCustomNotes"/>
+
+                    <TextBlock Text="Coach ID:"/>
+                    <TextBox x:Name="txtCoachId"/>
+
+                    <TextBlock Text="Recommended Package ID:"/>
+                    <TextBox x:Name="txtPackageId"/>
+
+                    <Button Content="Add Plan" Width="100" Click="BtnAddPlan_Click" Margin="0,10,0,0"/>
+                </StackPanel>
+
+                <!-- Rating Section -->
+                <TextBlock Text="Rate Selected Plan" FontSize="16" FontWeight="Bold" Margin="0,20,0,10"/>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Rating Value (1-5):"/>
+                    <TextBox x:Name="txtRatingValue" Width="50"/>
+
+                    <TextBlock Text="Feedback:"/>
+                    <TextBox x:Name="txtFeedback" Width="400"/>
+
+                    <Button Content="Submit Rating" Click="BtnSubmitRating_Click" Width="150" Margin="0,10,0,0"/>
+                </StackPanel>
+
+                <!-- Rating List -->
+                <ListView x:Name="lvRatings" Margin="0,10,0,0" Height="150">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Rate" DisplayMemberBinding="{Binding Rate}" Width="50"/>
+                            <GridViewColumn Header="Comment" DisplayMemberBinding="{Binding Comment}" Width="400"/>
+                            <GridViewColumn Header="Date" DisplayMemberBinding="{Binding CreatedAt}" Width="150"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

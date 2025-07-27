@@ -15,8 +15,9 @@
     using System.Windows.Shapes;
 using BLL.Service;
 using DAL.Models;
+using SmokingCessationSupportPlatform.Member;
 
-    namespace SmokingCessationSupportPlatform
+namespace SmokingCessationSupportPlatform
     {
         /// <summary>
         /// Interaction logic for LoginWindow.xaml
@@ -53,7 +54,7 @@ using DAL.Models;
 
                     string jsonData = JsonSerializer.Serialize(loginData);
                 
-                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                    var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
                     // Goi api
                     var response = await client.PostAsync(apiUrl, content);
@@ -63,7 +64,10 @@ using DAL.Models;
                     {
                         string responseContent = await response.Content.ReadAsStringAsync();
                     Console.WriteLine("Raw response: " + responseContent);
-                    
+
+                    try
+                    {
+
 
                         var loginResult = JsonSerializer.Deserialize<UserModel>(responseContent, new JsonSerializerOptions
                         {
@@ -92,8 +96,7 @@ using DAL.Models;
                             }
                             else if (role == "USER")
                             {
-                            MemberWindow memberWindow = new MemberWindow();
-                            memberWindow.Account = loginResult;
+                            MemberWindow memberWindow = new MemberWindow(loginResult);
                             memberWindow.Show();
                             this.Close();
                             }
@@ -102,14 +105,19 @@ using DAL.Models;
                             MessageBox.Show("Invalid Email or Password!!!");
                             }
                         }
-                    else
-                    {
-                        MessageBox.Show("Login failed!!! " + response.StatusCode);
-                    }
 
+                    }
+                    catch (JsonException ex)
+                    {
+                        MessageBox.Show("Không thể phân tích dữ liệu JSON trả về:\n" + responseContent);
+                    }
                 }
-                    
+                else
+                {
+                    MessageBox.Show("Login failed!!! " + response.StatusCode);
                 }
+
+            }
             }
         }
     }

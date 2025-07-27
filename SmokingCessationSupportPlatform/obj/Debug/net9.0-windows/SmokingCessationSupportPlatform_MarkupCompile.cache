@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
 D:\SourceCode\CodePRN212\SmokingCessationSupportPlatform\SmokingCessationSupportPlatform\App.xaml
-10-487577744
+191564087200
 
-132076212111
+25-242179960
 237-1808485264
-AdminWindow.xaml;Admin\BadgeManagementPage.xaml;Admin\CigarettePackagePage.xaml;Admin\MemberPackagePage.xaml;Admin\PostManagementPage.xaml;Admin\UserManagement.xaml;CoachWindow.xaml;LoginWindow.xaml;MainWindow.xaml;MemberWindow.xaml;
+AdminWindow.xaml;Admin\BadgeManagementPage.xaml;Admin\CigarettePackagePage.xaml;Admin\MemberPackagePage.xaml;Admin\PostManagementPage.xaml;Admin\UserManagement.xaml;CoachWindow.xaml;LoginWindow.xaml;MainWindow.xaml;MemberWindow.xaml;Member\AchievementPage.xaml;Member\BadgePage.xaml;Member\CreatePostWindow.xaml;Member\DashboardPage.xaml;Member\NotificationPage.xaml;Member\PostDetailPage.xaml;Member\PostManagement.xaml;Member\QuitPlanPage.xaml;Member\SmokingStatusPage.xaml;
 
 False
 

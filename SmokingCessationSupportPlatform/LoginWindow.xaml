@@ -22,8 +22,17 @@
             <Setter Property="Foreground" Value="#FFFFFFFF"/>
         </Style>
     </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#E8F5E9" Offset="0"/>
+            <GradientStop Color="#A5D6A7" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
+        <Border Width="450" Height="358" Background="White" CornerRadius="15" Padding="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <Canvas>
+            <TextBlock Text="Đăng nhập" FontSize="28" FontWeight="Bold" Foreground="#2E7D32" HorizontalAlignment="Left" Canvas.Left="514" Canvas.Top="204" Height="37" VerticalAlignment="Top" Width="172" RenderTransformOrigin="0.698,0.461"/>
+
             <Label Content="Email" Width="64" Canvas.Left="431" Canvas.Top="268" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <TextBox x:Name="txtEmail" Width="200" Canvas.Left="500" Canvas.Top="272" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" >
             </TextBox>
